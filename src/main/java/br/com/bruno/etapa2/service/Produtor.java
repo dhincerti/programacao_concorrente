@@ -1,5 +1,6 @@
 package br.com.bruno.etapa2.service;
 
+import static br.com.bruno.etapa2.common.Constantes.EXECUTION_MAX_TIME;
 import static br.com.bruno.etapa2.common.Constantes.PRODUTOR_SLEEP_TIME;
 import static br.com.bruno.etapa2.common.Constantes.TABELACAO;
 
@@ -29,7 +30,7 @@ public class Produtor implements Runnable {
 
 		LOGGER.info(loggerPreMassage + "START");
 
-		while (System.currentTimeMillis() < startDate + 10000) {
+		while (System.currentTimeMillis() < startDate + EXECUTION_MAX_TIME) {
 
 			buffer.addPedido();
 

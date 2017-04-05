@@ -1,6 +1,7 @@
 package br.com.bruno.etapa2;
 
 import static br.com.bruno.etapa2.common.Constantes.CONSUMIDOR_SLEEP_TIME;
+import static br.com.bruno.etapa2.common.Constantes.EXECUTION_MAX_TIME;
 import static br.com.bruno.etapa2.common.Constantes.MAXIMO_DE_PEDIDOS;
 import static br.com.bruno.etapa2.common.Constantes.PRODUTOR_SLEEP_TIME;
 import static br.com.bruno.etapa2.common.Constantes.QUANTIDADE_DE_THREADS;
@@ -24,9 +25,10 @@ public class Principal {
 
 		LOGGER.info("####  INICIO DA APLICAÇÂO  ####");
 		LOGGER.info("MAXIMO_DE_PEDIDOS: " + TABELACAO + MAXIMO_DE_PEDIDOS);
-		LOGGER.info("QUANTIDADE_DE_THREADS: " + QUANTIDADE_DE_THREADS);
-		LOGGER.info("CONSUMIDOR_SLEEP_TIME: " + CONSUMIDOR_SLEEP_TIME);
-		LOGGER.info("PRODUTOR_SLEEP_TIME: " + PRODUTOR_SLEEP_TIME);
+		LOGGER.info("QUANTIDADE_DE_THREADS: " + TABELACAO + QUANTIDADE_DE_THREADS);
+		LOGGER.info("CONSUMIDOR_SLEEP_TIME: " + TABELACAO + CONSUMIDOR_SLEEP_TIME);
+		LOGGER.info("PRODUTOR_SLEEP_TIME: " + TABELACAO + PRODUTOR_SLEEP_TIME);
+		LOGGER.info("EXECUTION_MAX_TIME: " + TABELACAO + EXECUTION_MAX_TIME);
 		LOGGER.info("###############################\n\n");
 
 		final long startDate = System.currentTimeMillis();

@@ -7,6 +7,7 @@ public class Constantes {
 	public static final int CONSUMIDOR_SLEEP_TIME = 2000;
 	//public static final int PRODUTOR_SLEEP_TIME = CONSUMIDOR_SLEEP_TIME / 2;
 	public static final int PRODUTOR_SLEEP_TIME = CONSUMIDOR_SLEEP_TIME;
+	public static final int EXECUTION_MAX_TIME = 180000;
 	public static final String TABELACAO = " \t ==> \t";
 
 	private Constantes() {

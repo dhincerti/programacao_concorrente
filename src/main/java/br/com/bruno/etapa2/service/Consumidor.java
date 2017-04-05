@@ -1,6 +1,7 @@
 package br.com.bruno.etapa2.service;
 
 import static br.com.bruno.etapa2.common.Constantes.CONSUMIDOR_SLEEP_TIME;
+import static br.com.bruno.etapa2.common.Constantes.EXECUTION_MAX_TIME;
 import static br.com.bruno.etapa2.common.Constantes.TABELACAO;
 
 import org.apache.log4j.Logger;
@@ -12,12 +13,7 @@ public class Consumidor implements Runnable {
 	public static final Logger LOGGER = Logger.getLogger(Consumidor.class);
 
 	private final Buffer buffer;
-
-	private long startDate;
-
-	public Consumidor(Buffer buffer) {
-		this.buffer = buffer;
-	}
+	private final long startDate;
 
 	public Consumidor(Buffer buffer, long startDate) {
 		this.buffer = buffer;
@@ -30,7 +26,7 @@ public class Consumidor implements Runnable {
 
 		LOGGER.info(loggerPreMassage + "START");
 
-		while (System.currentTimeMillis() < startDate + 10000) {
+		while (System.currentTimeMillis() < startDate + EXECUTION_MAX_TIME) {
 
 			buffer.removePedido();
 
